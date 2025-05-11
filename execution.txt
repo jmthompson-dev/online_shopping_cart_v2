@@ -1,0 +1,163 @@
+Jake@Jakes-MacBook-Pro online_shopping_cart_v2 % python3 online_shopping_cart_v2.py
+Item 1
+Enter the item name:
+Chocolate Chips
+Enter the item price:
+3
+Enter the item quantity:
+1
+
+Item 2
+Enter the item name:
+Bottled Water
+Enter the item price:
+1
+Enter the item quantity:
+10
+
+TOTAL COST
+Chocolate Chips 1 @ $3 = $3
+Bottled Water 10 @ $1 = $10
+Total: $13
+
+Enter customer name:
+John Doe
+Enter date:
+February 1, 2020
+
+Customer name: John Doe
+Today's date: February 1, 2020
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: a
+Enter the item name: Nike Romaleos
+Enter the item description: Volt color, Weightlifting shoes
+Enter the item price: 189
+Enter the item quantity: 2
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: a
+Enter the item name: Chocolate Chips
+Enter the item description: Semi-sweet
+Enter the item price: 3
+Enter the item quantity: 5
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: a
+Enter the item name: Powerbeats 2 Headphones
+Enter the item description: Bluetooth headphones
+Enter the item price: 128
+Enter the item quantity: 1
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: o
+
+OUTPUT SHOPPING CART
+John Doe's Shopping Cart - February 1, 2020
+Number of Items: 8
+Nike Romaleos 2 @ $189 = $378
+Chocolate Chips 5 @ $3 = $15
+Powerbeats 2 Headphones 1 @ $128 = $128
+
+Total: $521
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: i
+
+OUTPUT ITEMS' DESCRIPTIONS
+John Doe's Shopping Cart - February 1, 2020
+Nike Romaleos: Volt color, Weightlifting shoes
+Chocolate Chips: Semi-sweet
+Powerbeats 2 Headphones: Bluetooth headphones
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: r
+Enter name of item to remove: Chocolate Chips
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: c
+Enter the item name: Nike Romaleos
+Enter the new quantity: 3
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: o
+
+OUTPUT SHOPPING CART
+John Doe's Shopping Cart - February 1, 2020
+Number of Items: 4
+Nike Romaleos 3 @ $189 = $567
+Powerbeats 2 Headphones 1 @ $128 = $128
+
+Total: $695
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: i
+
+OUTPUT ITEMS' DESCRIPTIONS
+John Doe's Shopping Cart - February 1, 2020
+Nike Romaleos: Volt color, Weightlifting shoes
+Powerbeats 2 Headphones: Bluetooth headphones
+
+MENU
+a - Add item to cart
+r - Remove item from cart
+c - Change item quantity
+i - Output items' descriptions
+o - Output shopping cart
+q - Quit
+Choose an option: q
+Jake@Jakes-MacBook-Pro online_shopping_cart_v2 %
