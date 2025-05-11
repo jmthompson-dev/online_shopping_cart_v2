@@ -1,0 +1,105 @@
+PROGRAM ShoppingCart
+
+CLASS ItemToPurchase
+    METHOD __init__(name, desc, price, qty)
+        SET defaults for name, desc, price, qty
+        ASSIGN name, description, price, quantity to instance variables
+
+    METHOD print_item_cost
+        CALCULATE total = price * quantity
+        PRINT "<name> <quantity> @ $<price> = $<total>"
+
+CLASS ShoppingCart
+    METHOD __init__(customer, date)
+        SET customer_name, current_date with defaults
+        INITIALIZE cart_items as empty list
+
+    METHOD add_item(item)
+        APPEND item to cart_items
+
+    METHOD remove_item(name)
+        IF name not in cart_items
+            PRINT "Item not found in cart. Nothing removed."
+        REMOVE matching items by name
+
+    METHOD modify_item(item)
+        FOR each cart_item in cart_items
+            IF cart_item.name == item.name
+                UPDATE description if not "none"
+                UPDATE price if not 0
+                UPDATE quantity if not 0
+                RETURN
+        PRINT "Item not found in cart. Nothing modified."
+
+    METHOD get_num_items_in_cart
+        RETURN total quantity of all items
+
+    METHOD get_cost_of_cart
+        RETURN total cost of all items
+
+    METHOD print_total
+        PRINT cart header and number of items
+        IF cart is empty
+            PRINT "SHOPPING CART IS EMPTY"
+        ELSE
+            FOR each item
+                CALL item.print_item_cost()
+        PRINT total cost
+
+    METHOD print_descriptions
+        PRINT cart header
+        FOR each item
+            PRINT item name and description
+
+FUNCTION print_menu(cart)
+    LOOP until user enters 'q'
+        DISPLAY menu
+        GET user choice
+        CASE 'a':
+            TRY
+                PROMPT for item name, description, price, quantity
+                CONVERT price to float and quantity to int
+                CREATE item and add to cart
+            EXCEPT ValueError:
+                PRINT error message
+
+        CASE 'r':
+            PROMPT for item name to remove
+            CALL remove_item
+
+        CASE 'c':
+            TRY
+                PROMPT for item name and new quantity
+                CONVERT quantity to int
+                CALL modify_item with: name, "none", 0.0, qty
+            EXCEPT ValueError:
+                PRINT error message
+
+        CASE 'i': CALL print_descriptions
+        CASE 'o': CALL print_total
+        CASE 'q': EXIT loop
+        DEFAULT: PRINT invalid choice message
+
+FUNCTION main
+    PRINT "Item 1"
+    TRY
+        PROMPT for name, price, quantity
+        CREATE item1 with description "none"
+    EXCEPT ValueError: PRINT error and RETURN
+
+    PRINT "Item 2"
+    TRY
+        PROMPT for name, price, quantity
+        CREATE item2 with description "none"
+    EXCEPT ValueError: PRINT error and RETURN
+
+    PRINT total cost using item1.print_item_cost and item2.print_item_cost
+    CALCULATE and print total
+
+    PROMPT for customer name and date
+    PRINT both
+
+    CREATE ShoppingCart with customer name and date
+    CALL print_menu(cart)
+
+CALL main
